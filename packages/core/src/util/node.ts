@@ -522,7 +522,7 @@ export const getSvgTextWidthHeight = ({
   // 背景框宽度，最长一行字节数/2 * fontsize + 2
   // 背景框宽度， 行数 * fontsize + 2
   return {
-    width: Math.ceil(longestBytes / 2) * fontSize + fontSize / 4,
+    width: (longestBytes / 2) * fontSize + fontSize / 4,
     height: rowsLength * (fontSize + 2) + fontSize / 4,
   }
 }

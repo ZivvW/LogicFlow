@@ -775,6 +775,8 @@ export const getBytesLength = (word: string): number => {
     const char = word[i]
     if (char.match(/[A-Z]/)) {
       totalLength += 1.5
+    } else if (char === '.') {
+      totalLength += 0.5
     } else if ((c >= 0x0001 && c <= 0x007e) || (c >= 0xff60 && c <= 0xff9f)) {
       totalLength += 1
     } else {
